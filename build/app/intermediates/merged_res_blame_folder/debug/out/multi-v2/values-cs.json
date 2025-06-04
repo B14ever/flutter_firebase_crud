@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.flutter_firebase_crud.app-mergeDebugResources-32:/values-cs/values-cs.xml",
+            "outputFile": "com.firebase_crud.application.app-mergeDebugResources-33:/values-cs/values-cs.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Itan\\.gradle\\caches\\transforms-3\\4cefa050b0c4ea9b1f45909d19944071\\transformed\\core-1.13.1\\res\\values-cs\\values-cs.xml",

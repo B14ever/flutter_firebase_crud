@@ -1,4 +1,4 @@
-package com.example.flutter_firebase_crud
+package com.firebase_crud.application
 
 import io.flutter.embedding.android.FlutterActivity
 

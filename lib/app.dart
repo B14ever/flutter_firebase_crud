@@ -5,7 +5,7 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-      return MaterialApp.router(
+      return MaterialApp(
       title: 'Medebir',
       debugShowCheckedModeBanner: false,
     );
