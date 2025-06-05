@@ -4,7 +4,7 @@ import 'package:flutter_firebase_crud/features/notes/domain/entities/note_entits
 import 'package:flutter_firebase_crud/features/notes/presentation/bloc/note/note_bloc.dart';
 
 class EditNoteModal extends StatefulWidget {
-  final NoteEntits noteToEdit; // This will always be provided for editing
+  final NoteEntits noteToEdit; 
 
   const EditNoteModal({super.key, required this.noteToEdit});
 
@@ -34,11 +34,12 @@ class _EditNoteModalState extends State<EditNoteModal> {
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
       final updatedNote = widget.noteToEdit.copyWith(
+        updatedDate: DateTime.now(),
         title: _titleController.text.trim(),
         content: _contentController.text.trim(),
       );
       context.read<NoteBloc>().add(UpdateNote(updatedNote));
-      Navigator.pop(context); // Close the modal
+      Navigator.pop(context); 
     }
   }
 

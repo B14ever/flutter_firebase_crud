@@ -1,4 +1,3 @@
-// lib/domain/repositories/note_repository.dart
 import 'package:flutter_firebase_crud/features/notes/domain/entities/note_entits.dart';
 
 abstract class NoteRepository {

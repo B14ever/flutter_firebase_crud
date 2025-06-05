@@ -1,4 +1,3 @@
-// lib/features/notes/presentation/page/note_page.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_firebase_crud/features/notes/domain/entities/note_entits.dart';
@@ -31,14 +30,13 @@ class _NotePageState extends State<NotePage> {
   }
 
   void _showAddNoteModal() {
-    // Get the NoteBloc instance from the current context
+ 
     final noteBloc = context.read<NoteBloc>();
 
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      builder: (modalContext) { // Use a different name like modalContext to avoid confusion
-        // Provide the existing NoteBloc to the modal's subtree
+      builder: (modalContext) { 
         return BlocProvider.value(
           value: noteBloc,
           child: const AddNoteModal(),
@@ -48,14 +46,13 @@ class _NotePageState extends State<NotePage> {
   }
 
   void _showEditNoteModal(NoteEntits noteToEdit) {
-    // Get the NoteBloc instance from the current context
+   
     final noteBloc = context.read<NoteBloc>();
 
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      builder: (modalContext) { // Use modalContext
-        // Provide the existing NoteBloc to the modal's subtree
+      builder: (modalContext) { 
         return BlocProvider.value(
           value: noteBloc,
           child: EditNoteModal(noteToEdit: noteToEdit),
@@ -65,13 +62,12 @@ class _NotePageState extends State<NotePage> {
   }
 
   void _showDeleteConfirmationModal(String noteId) {
-    // Get the NoteBloc instance from the current context
+   
     final noteBloc = context.read<NoteBloc>();
 
     showModalBottomSheet(
       context: context,
-      builder: (modalContext) { // Use modalContext
-        // Provide the existing NoteBloc to the modal's subtree
+      builder: (modalContext) {
         return BlocProvider.value(
           value: noteBloc,
           child: DeleteConfirmationModal(noteId: noteId),
@@ -138,7 +134,7 @@ class _NotePageState extends State<NotePage> {
                 confirmDismiss: (direction) async {
                   if (direction == DismissDirection.endToStart) {
                     _showDeleteConfirmationModal(note.id);
-                    return false; // Prevent immediate dismissal; wait for modal confirmation
+                    return false;
                   }
                   return false;
                 },

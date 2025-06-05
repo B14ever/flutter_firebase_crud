@@ -1,4 +1,3 @@
-// lib/presentation/bloc/active_users/active_users_event.dart
 part of 'active_users_bloc.dart';
 
 abstract class ActiveUsersEvent extends Equatable {

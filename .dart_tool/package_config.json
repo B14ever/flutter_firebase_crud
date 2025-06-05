@@ -86,6 +86,24 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "firebase_auth",
+      "rootUri": "file:///C:/Users/Itan/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-5.5.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "firebase_auth_platform_interface",
+      "rootUri": "file:///C:/Users/Itan/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-7.6.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "firebase_auth_web",
+      "rootUri": "file:///C:/Users/Itan/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.14.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
       "name": "firebase_core",
       "rootUri": "file:///C:/Users/Itan/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-3.13.1",
       "packageUri": "lib/",
@@ -160,6 +178,12 @@
     {
       "name": "go_router",
       "rootUri": "file:///C:/Users/Itan/AppData/Local/Pub/Cache/hosted/pub.dev/go_router-15.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///C:/Users/Itan/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.1.2",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -320,7 +344,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-06-04T21:47:28.412671Z",
+  "generated": "2025-06-05T01:18:27.459317Z",
   "generator": "pub",
   "generatorVersion": "3.6.1",
   "flutterRoot": "file:///C:/Users/Itan/fvm/versions/3.27.3",

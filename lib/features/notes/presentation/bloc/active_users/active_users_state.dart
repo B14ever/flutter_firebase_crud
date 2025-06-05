@@ -1,20 +1,31 @@
-// lib/presentation/bloc/active_users/active_users_state.dart
 part of 'active_users_bloc.dart';
 
-abstract class ActiveUsersState extends Equatable {
+
+sealed class ActiveUsersState extends Equatable {
   const ActiveUsersState();
 
   @override
   List<Object> get props => [];
 }
 
-class ActiveUsersInitial extends ActiveUsersState {}
 
-class ActiveUsersUpdated extends ActiveUsersState {
+final class ActiveUsersInitial extends ActiveUsersState {}
+
+final class ActiveUsersUpdated extends ActiveUsersState {
   final int count;
 
   const ActiveUsersUpdated({required this.count});
 
   @override
   List<Object> get props => [count];
+}
+
+
+final class ActiveUsersError extends ActiveUsersState {
+  final String message;
+
+  const ActiveUsersError(this.message);
+
+  @override
+  List<Object> get props => [message];
 }

@@ -1,6 +1,6 @@
-// lib/injection_container.dart
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_firebase_crud/features/notes/domain/usecases/add_note_usecase.dart';
 import 'package:flutter_firebase_crud/features/notes/domain/usecases/delete_note_usecase.dart';
 import 'package:flutter_firebase_crud/features/notes/domain/usecases/load_notes_usecase.dart';
@@ -15,24 +15,30 @@ import 'package:flutter_firebase_crud/features/notes/presentation/bloc/note/note
 final serviceLocator = GetIt.instance;
 
 Future<void> init() async {
-  // BLoCs
-  serviceLocator.registerFactory(() => NoteBloc());
-  
-  serviceLocator.registerFactory<ActiveUsersBloc>(() => ActiveUsersBloc(
-        activeUsersRef: FirebaseDatabase.instance.ref('active_users'),
-      )..add(StartTrackingPresence()));
-  // Use Cases
-  serviceLocator.registerLazySingleton(() => AddNoteUseCase(serviceLocator())); 
+  serviceLocator.registerLazySingleton<FirebaseAuth>(() => FirebaseAuth.instance); 
+  serviceLocator.registerLazySingleton(() => FirebaseFirestore.instance);
+
+  serviceLocator.registerLazySingleton<NoteRemoteDataSource>(
+    () => NoteRemoteDataSourceImpl(firestore: serviceLocator()), 
+  );
+
+
+  serviceLocator.registerLazySingleton<NoteRepository>(
+    () => NoteRepositoryImpl(
+      remoteDataSource: serviceLocator(),
+      firebaseAuth: serviceLocator(), 
+    ),
+  );
+
+
+  serviceLocator.registerLazySingleton(() => AddNoteUseCase(serviceLocator()));
   serviceLocator.registerLazySingleton(() => DeleteNoteUseCase(serviceLocator()));
   serviceLocator.registerLazySingleton(() => LoadNotesUseCase(serviceLocator()));
   serviceLocator.registerLazySingleton(() => UpdateNoteUseCase(serviceLocator()));
-  // Repositories
-  serviceLocator.registerLazySingleton<NoteRepository>(() => NoteRepositoryImpl(
-        remoteDataSource: serviceLocator(), // This expects NoteRemoteDataSource
-      ));
 
-  // Data sources - FIXED: Register abstract type with concrete implementation
-  serviceLocator.registerLazySingleton<NoteRemoteDataSource>(
-    () => NoteRemoteDataSourceImpl(firestore: FirebaseFirestore.instance),
-  );
+  serviceLocator.registerFactory(() => NoteBloc());
+
+  serviceLocator.registerFactory<ActiveUsersBloc>(() => ActiveUsersBloc(
+        activeUsersRef: FirebaseDatabase.instance.ref('active_users'),
+      )..add(StartTrackingPresence()));
 }

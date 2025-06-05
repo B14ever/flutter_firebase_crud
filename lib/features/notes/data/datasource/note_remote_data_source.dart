@@ -1,4 +1,3 @@
-// lib/data/datasources/note_remote_data_source.dart
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 abstract class NoteRemoteDataSource {

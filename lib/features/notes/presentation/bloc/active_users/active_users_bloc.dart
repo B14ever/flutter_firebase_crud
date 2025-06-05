@@ -1,4 +1,4 @@
-// lib/presentation/bloc/active_users/active_users_bloc.dart
+
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
@@ -29,20 +29,19 @@ class ActiveUsersBloc extends Bloc<ActiveUsersEvent, ActiveUsersState> {
     _userRef = activeUsersRef.child(_sessionId!);
     
     try {
-      // Set initial presence with server timestamp
+   
       await _userRef!.set(ServerValue.timestamp);
       
-      // Schedule removal on disconnect
       _userRef!.onDisconnect().remove();
     } catch (e) {
-      // Handle error if needed
+   
       return;
     }
 
-    // Cancel existing subscription if any
+
     _subscription?.cancel();
 
-    // Create new subscription to listen for changes
+   
     _subscription = activeUsersRef.onValue.listen((DatabaseEvent event) {
       if (event.snapshot.value != null) {
         final Map<dynamic, dynamic> users = 
