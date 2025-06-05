@@ -1,12 +1,12 @@
 flutter_native_splash:
-  color: "#04234B"
+  color: "#ffffff"
   # color_dark: "#272727"
   image: assets/images/splashscreen/splashScreen.png
   # image_dark: assets/logos/lersha.png
   fullscreen: true
   # branding_mode: 
   android_12:
-    color: "#04234B"
+    color: "#ffffff"
     image: assets/images/splashscreen/splashScreen.png
     fullscreen: true
   web: false

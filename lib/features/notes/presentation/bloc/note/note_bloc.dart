@@ -17,6 +17,7 @@ class NoteBloc extends Bloc<NoteEvent, NoteState> {
     on<AddNote>(_onAddNote);
     on<UpdateNote>(_onUpdateNote);
     on<DeleteNote>(_onDeleteNote);
+    on<ClearMessages>(_onClearMessages);
   }
 
   Future<void> _onLoadNotes(LoadNotes event, Emitter<NoteState> emit) async {
@@ -24,12 +25,12 @@ class NoteBloc extends Bloc<NoteEvent, NoteState> {
     try {
       final loadNotesUseCase = serviceLocator<LoadNotesUseCase>();
       await emit.forEach<List<NoteEntits>>(
-        loadNotesUseCase(), 
+        loadNotesUseCase(),
         onData: (notes) => state.copyWith(
           status: NoteStatus.success,
           notes: notes,
         ),
-        onError: (error, stackTrace) { 
+        onError: (error, stackTrace) {
           print('Error loading notes: $error');
           print('Stack trace: $stackTrace');
           return state.copyWith(
@@ -38,7 +39,7 @@ class NoteBloc extends Bloc<NoteEvent, NoteState> {
           );
         },
       );
-    } catch (e, stackTrace) { 
+    } catch (e, stackTrace) {
       print('Caught exception in _onLoadNotes: $e');
       print('Stack trace: $stackTrace');
       emit(state.copyWith(
@@ -52,7 +53,10 @@ class NoteBloc extends Bloc<NoteEvent, NoteState> {
     try {
       final addNoteUseCase = serviceLocator<AddNoteUseCase>();
       await addNoteUseCase(event.note);
-    
+      emit(state.copyWith(
+        status: NoteStatus.success,
+        successMessage: 'Note created successfully',
+      ));
     } catch (e, stackTrace) {
       print('Caught exception in _onAddNote: $e');
       print('Stack trace: $stackTrace');
@@ -71,9 +75,13 @@ class NoteBloc extends Bloc<NoteEvent, NoteState> {
     try {
       final updateNoteUseCase = serviceLocator<UpdateNoteUseCase>();
       await updateNoteUseCase(event.note);
-     
-    } on FirebaseException catch (e, stackTrace) { 
-      print('Caught FirebaseException in _onUpdateNote: ${e.code} - ${e.message}');
+      emit(state.copyWith(
+        status: NoteStatus.success,
+        successMessage: 'Note Updated successfully',
+      ));
+    } on FirebaseException catch (e, stackTrace) {
+      print(
+          'Caught FirebaseException in _onUpdateNote: ${e.code} - ${e.message}');
       print('Stack trace: $stackTrace');
       if (e.code == 'permission-denied') {
         emit(state.copyWith(
@@ -81,7 +89,6 @@ class NoteBloc extends Bloc<NoteEvent, NoteState> {
           errorMessage: 'You cannot update a note that you did not create.',
         ));
       } else {
-       
         emit(state.copyWith(
           status: NoteStatus.failure,
           errorMessage: 'Failed to update note: ${e.message ?? e.toString()}',
@@ -101,9 +108,13 @@ class NoteBloc extends Bloc<NoteEvent, NoteState> {
     try {
       final deleteNoteUseCase = serviceLocator<DeleteNoteUseCase>();
       await deleteNoteUseCase(event.id);
-     
-    } on FirebaseException catch (e, stackTrace) { 
-      print('Caught FirebaseException in _onDeleteNote: ${e.code} - ${e.message}');
+      emit(state.copyWith(
+        status: NoteStatus.success,
+        successMessage: 'Note deleted successfully',
+      ));
+    } on FirebaseException catch (e, stackTrace) {
+      print(
+          'Caught FirebaseException in _onDeleteNote: ${e.code} - ${e.message}');
       print('Stack trace: $stackTrace');
       if (e.code == 'permission-denied') {
         emit(state.copyWith(
@@ -111,7 +122,6 @@ class NoteBloc extends Bloc<NoteEvent, NoteState> {
           errorMessage: 'You cannot delete a note that you did not create.',
         ));
       } else {
-    
         emit(state.copyWith(
           status: NoteStatus.failure,
           errorMessage: 'Failed to delete note: ${e.message ?? e.toString()}',
@@ -125,5 +135,9 @@ class NoteBloc extends Bloc<NoteEvent, NoteState> {
         errorMessage: 'An unexpected error occurred: ${e.toString()}',
       ));
     }
+  }
+
+  void _onClearMessages(ClearMessages event, Emitter<NoteState> emit) {
+    emit(state.copyWith(clearErrorMessage: true, clearSuccessMessage: true));
   }
 }

@@ -1,23 +1,23 @@
 [
     {
-        "merged": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-merged_res-35:\\mipmap-hdpi_launcher_icon.png.flat",
-        "source": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-main-29:\\mipmap-hdpi\\launcher_icon.png"
+        "merged": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-merged_res-35:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-main-29:\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-merged_res-35:\\drawable-night-xxxhdpi_android12splash.png.flat",
         "source": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-main-29:\\drawable-night-xxxhdpi\\android12splash.png"
     },
     {
-        "merged": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-merged_res-35:\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-main-29:\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-merged_res-35:\\mipmap-xhdpi_launcher_icon.png.flat",
-        "source": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-main-29:\\mipmap-xhdpi\\launcher_icon.png"
+        "merged": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-merged_res-35:\\mipmap-hdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-main-29:\\mipmap-hdpi\\launcher_icon.png"
     },
     {
         "merged": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-merged_res-35:\\drawable-hdpi_android12splash.png.flat",
         "source": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-main-29:\\drawable-hdpi\\android12splash.png"
+    },
+    {
+        "merged": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-merged_res-35:\\mipmap-xhdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-main-29:\\mipmap-xhdpi\\launcher_icon.png"
     },
     {
         "merged": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-merged_res-35:\\drawable-night-mdpi_android12splash.png.flat",
@@ -154,6 +154,10 @@
     {
         "merged": "com.firebase_crud.application.app-merged_res-35:/drawable-night-mdpi_android12splash.png.flat",
         "source": "com.firebase_crud.application.app-main-29:/drawable-night-mdpi/android12splash.png"
+    },
+    {
+        "merged": "com.firebase_crud.application.app-merged_res-35:/drawable-v21_background.png.flat",
+        "source": "com.firebase_crud.application.app-main-29:/drawable-v21/background.png"
     },
     {
         "merged": "com.firebase_crud.application.app-merged_res-35:/drawable-xxhdpi_splash.png.flat",

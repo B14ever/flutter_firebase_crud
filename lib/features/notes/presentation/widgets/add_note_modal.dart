@@ -36,14 +36,14 @@ class _AddNoteModalState extends State<AddNoteModal> {
 
       final newNote = NoteEntits(
         createdAt: DateTime.now(),
-        updatedDate: DateTime.now(), 
-        id: const Uuid().v4(), 
+        updatedDate: DateTime.now(),
+        id: const Uuid().v4(),
         title: _titleController.text.trim(),
         content: _contentController.text.trim(),
         userId: currentUser.uid,
       );
       context.read<NoteBloc>().add(AddNote(newNote));
-      Navigator.pop(context); 
+      Navigator.pop(context);
     }
   }
 
@@ -71,7 +71,6 @@ class _AddNoteModalState extends State<AddNoteModal> {
                 controller: _titleController,
                 decoration: const InputDecoration(
                   labelText: 'Title',
-                  border: OutlineInputBorder(),
                   hintText: 'Enter note title',
                 ),
                 validator: (value) {
@@ -87,7 +86,6 @@ class _AddNoteModalState extends State<AddNoteModal> {
                 maxLines: 5,
                 decoration: const InputDecoration(
                   labelText: 'Content',
-                  border: OutlineInputBorder(),
                   hintText: 'Enter note content',
                 ),
                 validator: (value) {
@@ -100,7 +98,7 @@ class _AddNoteModalState extends State<AddNoteModal> {
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _submitForm,
-                child: const Text('Add Note'), 
+                child: const Text('Add Note'),
               ),
               const SizedBox(height: 10),
             ],

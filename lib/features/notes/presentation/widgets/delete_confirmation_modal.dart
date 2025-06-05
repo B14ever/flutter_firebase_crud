@@ -16,10 +16,18 @@ class DeleteConfirmationModal extends StatelessWidget {
         children: [
           Text(
             'Confirm Deletion',
-            style: Theme.of(context).textTheme.titleLarge,
+            style: Theme.of(context)
+                .textTheme
+                .titleLarge, // Uses themed text style
           ),
           const SizedBox(height: 20),
-          const Text('Are you sure you want to delete this note? This action cannot be undone.'),
+          Text(
+            'Are you sure you want to delete this note? This action cannot be undone.',
+            style: Theme.of(context)
+                .textTheme
+                .bodyMedium, // Uses themed text style
+            textAlign: TextAlign.center, // Center align for better readability
+          ),
           const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,

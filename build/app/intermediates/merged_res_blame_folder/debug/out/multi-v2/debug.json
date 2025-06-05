@@ -1199,6 +1199,30 @@
             ]
         },
         {
+            "outputFile": "com.firebase_crud.application.app-merged_res-35:/values-v31_values-v31.arsc.flat",
+            "map": [
+                {
+                    "source": "N:\\projects\\personal\\flutter_firebase_crud\\android\\app\\src\\main\\res\\values-v31\\styles.xml",
+                    "from": {
+                        "startLines": "3,-1",
+                        "startColumns": "4,-1",
+                        "startOffsets": "173,-1",
+                        "endLines": "10,-1",
+                        "endColumns": "12,-1",
+                        "endOffsets": "694,-1"
+                    },
+                    "to": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,581",
+                        "endLines": "9,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "576,745"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\Itan\\.gradle\\daemon\\8.3\\com.firebase_crud.application.app-merged_res-35:\\values-da_values-da.arsc.flat",
             "map": [
                 {
@@ -4645,6 +4669,30 @@
                         "startOffsets": "3228,3328,3428,3535",
                         "endColumns": "99,99,106,98",
                         "endOffsets": "3323,3423,3530,3629"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.firebase_crud.application.app-merged_res-35:/values-night-v31_values-night-v31.arsc.flat",
+            "map": [
+                {
+                    "source": "N:\\projects\\personal\\flutter_firebase_crud\\android\\app\\src\\main\\res\\values-night-v31\\styles.xml",
+                    "from": {
+                        "startLines": "3,-1",
+                        "startColumns": "4,-1",
+                        "startOffsets": "172,-1",
+                        "endLines": "10,-1",
+                        "endColumns": "12,-1",
+                        "endOffsets": "693,-1"
+                    },
+                    "to": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,581",
+                        "endLines": "9,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "576,745"
                     }
                 }
             ]

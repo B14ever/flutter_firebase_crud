@@ -4,7 +4,7 @@ import 'package:flutter_firebase_crud/features/notes/domain/entities/note_entits
 import 'package:flutter_firebase_crud/features/notes/presentation/bloc/note/note_bloc.dart';
 
 class EditNoteModal extends StatefulWidget {
-  final NoteEntits noteToEdit; 
+  final NoteEntits noteToEdit;
 
   const EditNoteModal({super.key, required this.noteToEdit});
 
@@ -39,7 +39,7 @@ class _EditNoteModalState extends State<EditNoteModal> {
         content: _contentController.text.trim(),
       );
       context.read<NoteBloc>().add(UpdateNote(updatedNote));
-      Navigator.pop(context); 
+      Navigator.pop(context);
     }
   }
 
@@ -67,7 +67,6 @@ class _EditNoteModalState extends State<EditNoteModal> {
                 controller: _titleController,
                 decoration: const InputDecoration(
                   labelText: 'Title',
-                  border: OutlineInputBorder(),
                 ),
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
@@ -82,7 +81,6 @@ class _EditNoteModalState extends State<EditNoteModal> {
                 maxLines: 5,
                 decoration: const InputDecoration(
                   labelText: 'Content',
-                  border: OutlineInputBorder(),
                 ),
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
