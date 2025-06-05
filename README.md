@@ -26,7 +26,7 @@ Clone the repo:
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/flutter-firebase-crud.git
+git clone git@github.com:B14ever/flutter_firebase_crud.git
 cd flutter-firebase-crud
 If using FVM:
 
