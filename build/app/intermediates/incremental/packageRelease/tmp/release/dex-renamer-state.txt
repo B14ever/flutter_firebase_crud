@@ -1,0 +1,4 @@
+#Thu Jun 05 10:39:15 EAT 2025
+base.0=N\:\\projects\\personal\\flutter_firebase_crud\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
