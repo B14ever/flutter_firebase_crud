@@ -38,3 +38,4 @@ com.firebase_crud.application.app-packaged_res-36 N:\projects\personal\flutter_f
 com.firebase_crud.application.app-packaged_res-37 N:\projects\personal\flutter_firebase_crud\build\firebase_auth\intermediates\packaged_res\debug
 com.firebase_crud.application.app-packaged_res-38 N:\projects\personal\flutter_firebase_crud\build\firebase_core\intermediates\packaged_res\debug
 com.firebase_crud.application.app-packaged_res-39 N:\projects\personal\flutter_firebase_crud\build\firebase_database\intermediates\packaged_res\debug
+com.firebase_crud.application.app-packaged_res-40 N:\projects\personal\flutter_firebase_crud\build\flutter_native_splash\intermediates\packaged_res\debug

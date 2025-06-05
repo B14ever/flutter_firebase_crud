@@ -42,8 +42,8 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
-        android:icon="@mipmap/ic_launcher"
-        android:label="flutter_firebase_crud" >
+        android:icon="@mipmap/launcher_icon"
+        android:label="EverGreen Notes" >
         <activity
             android:name="com.firebase_crud.application.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

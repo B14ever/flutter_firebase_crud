@@ -60,8 +60,8 @@
 42-->[androidx.core:core:1.13.1] C:\Users\Itan\.gradle\caches\transforms-3\56171c67d3b3b7353fd1934980ff2166\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 43        android:debuggable="true"
 44        android:extractNativeLibs="false"
-45        android:icon="@mipmap/ic_launcher"
-46        android:label="flutter_firebase_crud" >
+45        android:icon="@mipmap/launcher_icon"
+46        android:label="EverGreen Notes" >
 47        <activity
 48            android:name="com.firebase_crud.application.MainActivity"
 49            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

@@ -1,1 +1,0 @@
- N:\\projects\\personal\\flutter_firebase_crud\\.dart_tool\\flutter_build\\ce400693bc44eadbb7a56e8557b411ed\\native_assets.yaml: 

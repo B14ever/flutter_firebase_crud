@@ -68,6 +68,7 @@ MERGED from [:cloud_firestore] N:\projects\personal\flutter_firebase_crud\build\
 MERGED from [:firebase_auth] N:\projects\personal\flutter_firebase_crud\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_database] N:\projects\personal\flutter_firebase_crud\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] N:\projects\personal\flutter_firebase_crud\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:flutter_native_splash] N:\projects\personal\flutter_firebase_crud\build\flutter_native_splash\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\Itan\.gradle\caches\transforms-3\6d41bcea8e67c96567274f502db98b61\transformed\jetified-firebase-firestore-25.1.4\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\Itan\.gradle\caches\transforms-3\48c6a3484db27dfbd15ad5103a2a900f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.firebase:firebase-database:21.0.0] C:\Users\Itan\.gradle\caches\transforms-3\1becb96117c8bcf5de67b7e79ef55657\transformed\jetified-firebase-database-21.0.0\AndroidManifest.xml:15:1-38:12
@@ -164,6 +165,8 @@ MERGED from [:firebase_database] N:\projects\personal\flutter_firebase_crud\buil
 MERGED from [:firebase_database] N:\projects\personal\flutter_firebase_crud\build\firebase_database\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] N:\projects\personal\flutter_firebase_crud\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] N:\projects\personal\flutter_firebase_crud\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_native_splash] N:\projects\personal\flutter_firebase_crud\build\flutter_native_splash\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_native_splash] N:\projects\personal\flutter_firebase_crud\build\flutter_native_splash\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\Itan\.gradle\caches\transforms-3\6d41bcea8e67c96567274f502db98b61\transformed\jetified-firebase-firestore-25.1.4\AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\Itan\.gradle\caches\transforms-3\6d41bcea8e67c96567274f502db98b61\transformed\jetified-firebase-firestore-25.1.4\AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\Itan\.gradle\caches\transforms-3\48c6a3484db27dfbd15ad5103a2a900f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:21:5-23:151
